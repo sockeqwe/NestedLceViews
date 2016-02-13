@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hannesdorfmann.nestedlceviews.MainActivity"
+    >
+
+
+  <ProgressBar
+      android:id="@+id/loadingView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:indeterminate="true"
+      />
+
+  <TextView
+      android:id="@id/errorView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:text="Error"
+      />
+
+
+  <LinearLayout
+      android:id="@+id/contentView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:id="@+id/screenDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="6dp"
+        />
+
+
+    <fragment
+        android:name="com.hannesdorfmann.nestedlceviews.sub.SubFragment"
+        android:id="@+id/subfragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+  </LinearLayout>
+
+</FrameLayout>
